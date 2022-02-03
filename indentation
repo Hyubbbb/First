@@ -1,0 +1,6 @@
+if True:
+  print("True1") # space bar 2번 -> Ok
+  
+  
+if True:
+    print("True2") # space bar 4번 -> Ok
