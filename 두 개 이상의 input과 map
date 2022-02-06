@@ -1,0 +1,26 @@
+# 2개 이상의 input을 받을 때,
+
+a, b = input().split()
+print(a, b)
+# input()이 된 것을 눈으로 식별하기 어렵다.
+
+a, b = input('문자 두 개를 입력해주세요: ').split()
+print(a, b)
+# 식별하기 편해짐
+
+a, b = input('숫자 두 개를 입력해주세요: ').split()
+print(a+b) # -> input은 항상 문자열로 입력을 받기 때문에, 이대로 두 수의 합을 구할 수 없다.
+
+a = int(a)
+b = int(b)
+print(a+b) # 입력받은 두 값에 int를 취해줌으로써 두 수의 연산이 가능해졌다.
+
+# 연산을 위한 숫자가 많을 때는? -> 각각 int를 취해주는 게 너무 번거롭다.
+# -> map 함수를 이용해주자.
+a, b = map(int, input('숫자 두 개를 입력해주세요: ').split())
+print(a+b)
+
+# 공백이 아닌 다른 기준으로 분리하기
+a, b = map(int, input('숫자 두 개를 입력해주세요. (콤마): ').split(','))
+print(a+b)
+
